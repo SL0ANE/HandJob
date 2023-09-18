@@ -1,0 +1,44 @@
+{
+	"name": "hand_job",
+	"title": "Hand Job",
+	"version": "1.0.0",
+	"tags": [
+		"Java",
+		"Animation"
+	],
+	"min_blockbench_version": "4.8.3",
+	"author": {
+		"name": "晴路卡",
+		"email": "dadloy@qq.com",
+		"url": "https://space.bilibili.com/33229178"
+	},
+	"repository": {
+		"type": "github",
+		"url": "https://github.com/SL0ANE/HandJob"
+	},
+	"description": "A plugin for hand item animation",
+	"main": "./dist/index.js",
+	"types": "./dist/src/index.d.ts",
+	"private": true,
+	"scripts": {
+		"build:scripts": "esbuild --bundle --platform=node --outfile=dist/build.cjs --packages=external ./tools/esbuild.ts",
+		"build:dev": "yarn build:scripts && node ./dist/build.cjs --mode=dev",
+		"build:prod": "yarn build:scripts && node ./dist/build.cjs",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.21.1",
+		"@types/node": "^17.0.21",
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
+		"@typescript-eslint/parser": "^5.54.0",
+		"blockbench-types": "https://github.com/SnaveSutit/blockbench-types.git",
+		"esbuild": "^0.17.10",
+		"eslint": "^8.35.0",
+		"prettier": "^2.5.1",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.5.5",
+		"vue": "^3.2.33"
+	},
+	"dependencies": {},
+	"license": "MIT"
+}
